@@ -20,7 +20,8 @@ class test():
         print(self.a)
 
     def printb(self):
-        print(self.b)
+        self.c = 1
+        print(self.c)
 #
 #
 # class test_test():
@@ -43,12 +44,14 @@ class test():
 #
 # print(bullets)
 
-def var(test):
-    test.a+=1
-    test.b+=1
+# def var(test):
+#     test.a+=1
+#     test.b+=1
 
 t=test(9,9)
-var(t)
-
-print(t.a)
-print(t.b)
+t.printb()
+print(t)
+# var(t)
+#
+# print(t.a)
+# print(t.b)
