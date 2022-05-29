@@ -4,7 +4,7 @@ class GameStats():
         #初始化统计信息
         self.ai_settings=ai_settings
         self.reset_stats()
-        self.game_active=True
+        self.game_active=False
 
     def reset_stats(self):
         """初始化再游戏运行期间可能会变化的统计信息"""
