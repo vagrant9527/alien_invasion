@@ -63,7 +63,7 @@ def check_events(ai_settings, screen, stats, play_button, ship, aliens, bullets)
             check_play_button(ai_settings, screen, stats, play_button, ship, aliens, bullets, mouse_x, mouse_y)
 
 
-def update_screen(ai_settings, screen, stats, ship, aliens, bullets, play_button):
+def update_screen(ai_settings, screen, stats,sb, ship, aliens, bullets, play_button):
     screen.fill(ai_settings.bg_color)
     # 在飞船和外星人后面重绘所有子弹
     for bullet in bullets.sprites():
@@ -72,7 +72,8 @@ def update_screen(ai_settings, screen, stats, ship, aliens, bullets, play_button
     # 对编组调用draw时，pygame自动绘制编组的每个元素，绘制元素的位置由rect决定。
     # 所以这句话时是在屏幕中绘制编组中所有的外星人
     aliens.draw(screen)
-
+    #显示得分
+    sb.show_score()
     # 如果游戏处于非活动状态，就绘制Play按钮
     if not stats.game_active:
         play_button.draw_button()
